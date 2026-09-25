@@ -24,9 +24,9 @@ const PRODUCTS = [
     art: "arcade",
   },
   {
-    tag: "Producto digital",
-    title: "Acceso Pro",
-    desc: "Mi producto digital en Hotmart. Acceso inmediato y seguro desde cualquier lugar.",
+    tag: "Guía de inversión",
+    title: "De cero a inversionista",
+    desc: "Invierte en Wall Street con esta guía paso a paso.",
     cta: "Obtener acceso",
     url: "https://pay.hotmart.com/S103203527C?bid=1764518330085",
     c1: "#c6ff3d",
@@ -78,7 +78,7 @@ const ART = {
         <line x1="190" y1="230" x2="190" y2="300"/><line x1="150" y1="230" x2="90" y2="300"/><line x1="230" y1="230" x2="290" y2="300"/><line x1="110" y1="230" x2="-10" y2="300"/><line x1="270" y1="230" x2="390" y2="300"/>
       </g>
       <rect y="230" width="380" height="70" fill="#120f1c" opacity=".35"/>
-      <g class="art-float" fill="#c6ff3d" transform="translate(154 52) scale(.82)">
+      <g transform="translate(154 52) scale(.82)"><g class="art-float" fill="#c6ff3d">
         <!-- invasor pixel 11x8 -->
         <rect x="16" y="0" width="8" height="8"/><rect x="64" y="0" width="8" height="8"/>
         <rect x="24" y="8" width="8" height="8"/><rect x="56" y="8" width="8" height="8"/>
@@ -88,7 +88,7 @@ const ART = {
         <rect x="0" y="40" width="8" height="8"/><rect x="16" y="40" width="56" height="8"/><rect x="80" y="40" width="8" height="8"/>
         <rect x="0" y="48" width="8" height="8"/><rect x="16" y="48" width="8" height="8"/><rect x="64" y="48" width="8" height="8"/><rect x="80" y="48" width="8" height="8"/>
         <rect x="24" y="56" width="16" height="8"/><rect x="48" y="56" width="16" height="8"/>
-      </g>
+      </g></g>
       <text class="art-blink" x="190" y="138" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="900" font-size="15" letter-spacing="3" fill="#fff">PRESS START</text>
       <rect width="380" height="300" fill="url(#scan)"/>
     </svg>`,
@@ -104,11 +104,11 @@ const ART = {
       <path class="art-rise" d="M0 250 L60 222 L110 232 L170 170 L220 186 L280 110 L330 124 L380 60" fill="none" stroke="#c6ff3d" stroke-width="4" stroke-linejoin="round" stroke-dasharray="400" />
       <circle class="art-pulse" cx="280" cy="110" r="9" fill="#c6ff3d"/>
       <circle cx="280" cy="110" r="4" fill="#07060b"/>
-      <g class="art-float" transform="translate(62 92)">
-        <rect width="150" height="84" rx="18" fill="rgba(7,6,11,.8)" stroke="rgba(255,255,255,.18)"/>
-        <text x="20" y="34" font-family="Space Grotesk, sans-serif" font-size="12" fill="#a39fb2" letter-spacing="1.5">NIVEL</text>
-        <text x="20" y="66" font-family="Unbounded, sans-serif" font-weight="900" font-size="26" fill="#fff">PRO ↗</text>
-      </g>
+      <g transform="translate(62 92)"><g class="art-float">
+        <rect width="176" height="84" rx="18" fill="rgba(7,6,11,.8)" stroke="rgba(255,255,255,.18)"/>
+        <text x="20" y="34" font-family="Space Grotesk, sans-serif" font-size="12" fill="#a39fb2" letter-spacing="1.5">MERCADO</text>
+        <text x="20" y="66" font-family="Unbounded, sans-serif" font-weight="900" font-size="26" fill="#fff">WALL ST ↗</text>
+      </g></g>
       <g transform="translate(296 214)">
         <circle r="30" fill="#07060b" opacity=".85"/>
         <path d="M-10 -2 l7 8 l14 -16" fill="none" stroke="#c6ff3d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
