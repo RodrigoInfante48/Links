@@ -4,13 +4,13 @@
    ========================================================== */
 const PRODUCTS = [
   {
-    tag: "Bot con IA",
-    title: "DentBot",
-    desc: "Asistente inteligente para clínicas dentales: agenda, responde y atiende 24/7.",
-    cta: "Conocer DentBot",
-    url: "https://rodrigoinfante48.github.io/DentBot/",
-    c1: "#3de7ff",
-    c2: "#7a5cff",
+    tag: "App dental",
+    title: "Dent Pocket",
+    desc: "Odontograma digital para tu consulta: registra, marca y exporta en PDF en segundos.",
+    cta: "Conocer Dent Pocket",
+    url: "https://dentpocket.com",
+    c1: "#3dd6c3",
+    c2: "#8b6cff",
     art: "dent",
   },
   {
@@ -40,27 +40,78 @@ const ART = {
   dent: `
     <svg viewBox="0 0 380 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
-        <pattern id="dots-d" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="rgba(255,255,255,.18)"/></pattern>
-        <linearGradient id="tooth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#bff6ff"/></linearGradient>
+        <pattern id="dots-d" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="rgba(255,255,255,.14)"/></pattern>
+        <radialGradient id="glow-teal" cx="0" cy=".55" r=".85"><stop offset="0" stop-color="#3dd6c3" stop-opacity=".55"/><stop offset=".45" stop-color="#0b3b3c" stop-opacity=".7"/><stop offset="1" stop-color="#0b3b3c" stop-opacity="0"/></radialGradient>
+        <radialGradient id="glow-violet" cx="1" cy=".45" r=".7"><stop offset="0" stop-color="#8b6cff" stop-opacity=".35"/><stop offset="1" stop-color="#8b6cff" stop-opacity="0"/></radialGradient>
+        <radialGradient id="glow-mint" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3dd6c3" stop-opacity=".45"/><stop offset="1" stop-color="#3dd6c3" stop-opacity="0"/></radialGradient>
+        <linearGradient id="tooth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f2fbf9"/><stop offset="1" stop-color="#a8efe3"/></linearGradient>
+        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="rgba(255,255,255,.22)"/><stop offset="1" stop-color="rgba(255,255,255,.05)"/></linearGradient>
       </defs>
+      <rect width="380" height="300" fill="#0b0f14"/>
+      <rect width="380" height="300" fill="url(#glow-teal)"/>
+      <rect width="380" height="300" fill="url(#glow-violet)"/>
       <rect width="380" height="300" fill="url(#dots-d)"/>
-      <circle class="art-spin" cx="190" cy="160" r="112" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5" stroke-dasharray="4 10"/>
+      <circle class="art-spin" cx="190" cy="168" r="112" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.5" stroke-dasharray="4 10"/>
+      <ellipse cx="190" cy="176" rx="120" ry="96" fill="url(#glow-mint)"/>
+
+      <!-- Diente Dent Pocket con tablet -->
       <g class="art-float">
-        <path d="M150 92c-26 0-40 22-36 52 3 22 12 34 16 62 3 20 8 32 18 32 12 0 12-22 20-40 4-9 10-12 22-12s18 3 22 12c8 18 8 40 20 40 10 0 15-12 18-32 4-28 13-40 16-62 4-30-10-52-36-52-16 0-24 8-40 8s-24-8-40-8z" fill="url(#tooth)"/>
-        <circle cx="170" cy="150" r="7" fill="#07060b"/><circle cx="210" cy="150" r="7" fill="#07060b"/>
-        <path d="M172 172q18 14 36 0" fill="none" stroke="#07060b" stroke-width="5" stroke-linecap="round"/>
-        <circle cx="173" cy="147" r="2.2" fill="#fff"/><circle cx="213" cy="147" r="2.2" fill="#fff"/>
+        <g transform="translate(0 -18)">
+          <path d="M150 92c-26 0-40 22-36 52 3 22 12 34 16 62 3 20 8 32 18 32 12 0 12-22 20-40 4-9 10-12 22-12s18 3 22 12c8 18 8 40 20 40 10 0 15-12 18-32 4-28 13-40 16-62 4-30-10-52-36-52-16 0-24 8-40 8s-24-8-40-8z" fill="url(#tooth)" stroke="#7ff0de" stroke-opacity=".7" stroke-width="2"/>
+          <ellipse cx="146" cy="116" rx="14" ry="8" fill="#fff" opacity=".9" transform="rotate(-30 146 116)"/>
+          <circle cx="172" cy="146" r="7" fill="#07060b"/><circle cx="208" cy="146" r="7" fill="#07060b"/>
+          <circle cx="174.5" cy="143.5" r="2.2" fill="#fff"/><circle cx="210.5" cy="143.5" r="2.2" fill="#fff"/>
+          <path d="M180 164q10 8 20 0" fill="none" stroke="#07060b" stroke-width="4.5" stroke-linecap="round"/>
+        </g>
+        <!-- brazos -->
+        <path d="M120 150q-12 22 6 50" fill="none" stroke="#e9fbf7" stroke-width="9" stroke-linecap="round"/>
+        <path d="M260 150q12 22 -6 50" fill="none" stroke="#e9fbf7" stroke-width="9" stroke-linecap="round"/>
+        <!-- tablet -->
+        <g transform="rotate(-4 190 217)">
+          <rect x="124" y="176" width="132" height="84" rx="13" fill="#1a2230" stroke="#3dd6c3" stroke-opacity=".6" stroke-width="1.5"/>
+          <rect x="131" y="183" width="118" height="70" rx="8" fill="#fbf4e6"/>
+          <g>
+            <g transform="translate(148.4 236.3) rotate(278)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/></g>
+            <g transform="translate(151.2 225.2) rotate(292)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/><circle class="art-pulse" r="2.4" fill="#ff4d5e"/></g>
+            <g transform="translate(156.7 215.2) rotate(308)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/></g>
+            <g transform="translate(164.4 207.1) rotate(322)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#4b8bff" stroke="#d9cfbd" stroke-width="1"/></g>
+            <g transform="translate(173.9 201.3) rotate(338)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/></g>
+            <g transform="translate(184.5 198.4) rotate(352)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/><circle class="art-pulse" r="2.4" fill="#ff4d5e"/></g>
+            <g transform="translate(195.5 198.4) rotate(368)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/></g>
+            <g transform="translate(206.1 201.3) rotate(382)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/></g>
+            <g transform="translate(215.6 207.1) rotate(398)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/></g>
+            <g transform="translate(223.3 215.2) rotate(412)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/><circle class="art-pulse" r="2.4" fill="#ff4d5e"/></g>
+            <g transform="translate(228.8 225.2) rotate(428)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#4b8bff" stroke="#d9cfbd" stroke-width="1"/></g>
+            <g transform="translate(231.6 236.3) rotate(442)"><rect x="-4.5" y="-5.5" width="9" height="11" rx="3.5" fill="#ffffff" stroke="#d9cfbd" stroke-width="1"/></g>
+          </g>
+        </g>
+        <circle cx="127" cy="204" r="7" fill="#e9fbf7"/>
+        <circle cx="253" cy="200" r="7" fill="#e9fbf7"/>
       </g>
-      <g transform="translate(214 74)">
-        <rect width="104" height="46" rx="16" fill="#07060b" opacity=".85"/>
-        <path d="M18 46l-6 12 18-12z" fill="#07060b" opacity=".85"/>
-        <circle class="art-pulse" cx="32" cy="23" r="6" fill="#3de7ff"/>
-        <circle class="art-pulse" cx="52" cy="23" r="6" fill="#3de7ff" style="animation-delay:.3s"/>
-        <circle class="art-pulse" cx="72" cy="23" r="6" fill="#3de7ff" style="animation-delay:.6s"/>
-      </g>
-      <g transform="translate(58 204)">
-        <rect width="98" height="36" rx="14" fill="rgba(255,255,255,.92)"/>
-        <text x="49" y="23" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="13" fill="#07060b">24/7 ✓</text>
+
+      <!-- chips flotantes -->
+      <g transform="translate(46 128)"><g class="art-float" style="animation-delay:-1.5s">
+        <rect width="44" height="44" rx="13" fill="url(#glass)" stroke="rgba(255,255,255,.28)"/>
+        <path d="M13 23l6 6 12-13" fill="none" stroke="#3dd6c3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g></g>
+      <g transform="translate(292 136)"><g class="art-float" style="animation-delay:-3s">
+        <rect width="44" height="44" rx="13" fill="url(#glass)" stroke="rgba(255,255,255,.28)"/>
+        <path d="M15 10h10l6 6v18H15z" fill="#fff" opacity=".92"/>
+        <path d="M25 10v6h6" fill="none" stroke="#c9c3d6" stroke-width="1.5"/>
+        <rect x="18" y="22" width="10" height="2.5" rx="1.2" fill="#ff4d5e"/>
+        <rect x="18" y="27" width="7" height="2.5" rx="1.2" fill="#c9c3d6"/>
+      </g></g>
+      <g transform="translate(66 220)"><g class="art-float" style="animation-delay:-4.5s">
+        <rect width="38" height="38" rx="12" fill="url(#glass)" stroke="rgba(255,255,255,.28)"/>
+        <path d="M14 10c-5 0-7 4-6 9 1 4 2 6 3 10 0 2 1 4 3 4s2-4 4-6 1-2 1-2 1 0 1 2 2 6 4 6 3-2 3-4c1-4 2-6 3-10 1-5-1-9-6-9-3 0-4 1.5-5 1.5s-2-1.5-5-1.5z" fill="#e9fbf7"/>
+      </g></g>
+
+      <!-- destellos -->
+      <g fill="#7ff0de">
+        <path class="art-pulse" d="M100 96l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z"/>
+        <path class="art-pulse" style="animation-delay:.8s" d="M290 92l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        <path class="art-pulse" style="animation-delay:1.6s" d="M316 232l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        <circle class="art-pulse" style="animation-delay:1.2s" cx="262" cy="270" r="2.5"/>
       </g>
     </svg>`,
 
